@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="el.FXMLDashboardController">
+  <tabs>
+    <Tab onSelectionChanged="#GetTotalEmployeeRegister" text="Dashboard">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@../css/dashboard.css">
+               <children>
+                  <HBox alignment="CENTER" layoutX="152.0" layoutY="14.0" prefHeight="120.0" prefWidth="600.0" spacing="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <Pane prefHeight="120.0" prefWidth="145.0">
+                           <children>
+                              <Label layoutX="25.0" layoutY="24.0" text="Total Employee &#10;Register" textAlignment="CENTER" />
+                              <Label fx:id="totalRegister" layoutX="53.0" layoutY="75.0" text="150" textFill="#2107ed">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="root" />
+                              <String fx:value="paneltext" />
+                           </styleClass>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" layoutX="91.0" layoutY="342.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="47.0" text="Enter employee Id to Check Leave Status" textAlignment="CENTER" textFill="#2705ff" />
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <Label text="Employee Id : " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="checkid" prefWidth="200.0" promptText="Enter Employee Id" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#CheckLeave" prefHeight="32.0" prefWidth="200.0" text="Check Leave" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="root" />
+                        <String fx:value="paneltext" />
+                     </styleClass>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="100.0" layoutY="160.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="160.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="47.0" text="Enter Employee Id to Schedule Leave " textAlignment="CENTER" textFill="#2705ff" />
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <Label text="Employee Id : " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="scheduleid" prefWidth="200.0" promptText="Enter Employee Id" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#ScheduleLeave" prefHeight="32.0" prefWidth="200.0" text="Schedule Leave" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="root" />
+                        <String fx:value="paneltext" />
+                     </styleClass>
+                  </VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="panel" />
+                  <String fx:value="paneltext" />
+               </styleClass></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Add  Employee">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="panel" stylesheets="@../css/dashboard.css">
+               <children>
+                  <VBox layoutY="23.0" prefHeight="250.0" prefWidth="100.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="10.0" styleClass="paneltext" stylesheets="@../css/dashboard.css">
+                           <children>
+                              <Label layoutX="211.0" layoutY="23.0" text="*" textAlignment="CENTER" textFill="#f20202" />
+                              <Label text="Employee Id  " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="fempid" prefWidth="200.0" promptText="Enter Employee Id">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="10.0" styleClass="paneltext" stylesheets="@../css/dashboard.css">
+                           <children>
+                              <Label layoutX="201.0" layoutY="23.0" text="*" textAlignment="CENTER" textFill="#f20202" />
+                              <Label text="Employee Name " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="fempname" prefWidth="200.0" promptText="Enter Employee Name">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="10.0" styleClass="paneltext" stylesheets="@../css/dashboard.css">
+                           <children>
+                              <Label layoutX="205.0" layoutY="23.0" text="*" textAlignment="CENTER" textFill="#f20202" />
+                              <Label text="Father 's Name " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="ffname" prefWidth="200.0" promptText="Enter Employee Father's Name">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="10.0" styleClass="paneltext" stylesheets="@../css/dashboard.css">
+                           <children>
+                              <Label layoutX="201.0" layoutY="23.0" text="*" textAlignment="CENTER" textFill="#f20202" />
+                              <Label text="Date of Birth " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <DatePicker fx:id="fdob" promptText="Enter Date of Birth" showWeekNumbers="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="10.0" styleClass="paneltext" stylesheets="@../css/dashboard.css">
+                           <children>
+                              <Label layoutX="194.0" layoutY="23.0" text="*" textAlignment="CENTER" textFill="#f20202" />
+                              <Label text="Date of Joining " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <DatePicker fx:id="fdoj" promptText="Enter Date of Joining" showWeekNumbers="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutY="301.0" prefWidth="200.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <CheckBox fx:id="previouscheck" mnemonicParsing="false" onAction="#CheckBoxEvent" />
+                        <Label text="Adding old Employee?" textAlignment="CENTER" textFill="#f80606" underline="true" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="leavepanel" layoutY="330.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="10.0" styleClass="paneltext" stylesheets="@../css/dashboard.css">
+                           <children>
+                              <Label layoutX="255.0" layoutY="23.0" text="*" textAlignment="CENTER" textFill="#f20404" />
+                              <Label text="Total Leave Remaining : " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="ftl" prefWidth="50.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="20.0" styleClass="paneltext" stylesheets="@../css/dashboard.css">
+                           <children>
+                              <CheckBox fx:id="tl6check" mnemonicParsing="false" onAction="#CheckBoxEvent" />
+                              <Label text="Leave Remaining (Jan - Jun) : " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="fl6" prefWidth="50.0" />
+                              <CheckBox fx:id="tl12check" mnemonicParsing="false" onAction="#CheckBoxEvent" />
+                              <Label layoutX="191.0" layoutY="19.0" text="Leave Remaining (Jul - Dec) : " textAlignment="CENTER" underline="true" />
+                              <TextField fx:id="fl12" layoutX="379.0" layoutY="11.0" prefWidth="50.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" fillHeight="false" layoutY="447.0" prefWidth="600.0" spacing="20.0" styleClass="paneltext" stylesheets="@../css/dashboard.css" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#Add_Employee" prefHeight="32.0" prefWidth="200.0" text="Add Employee" />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="309.0" layoutY="499.0" text="* fields are compulsory" textAlignment="CENTER" textFill="#f80606" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Update Employee">
+         <content>
+            <AnchorPane prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="findpanel" alignment="CENTER" prefHeight="200.0" prefWidth="382.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" text="Enter Employee Id to Update his/her Record" textAlignment="CENTER" textFill="#2107ed">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <Label text="*" textAlignment="CENTER" textFill="#f20202" />
+                              <Label text="Employee Id : " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="updateid" prefWidth="200.0" promptText="Enter Employee Id" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#Update_Employee_Panel" prefHeight="32.0" prefWidth="200.0" text="Find Employee" />
+                           </children>
+                        </HBox>
+                        <Label text="* fields are compulsory" textAlignment="CENTER" textFill="#f80606" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="panel" />
+                        <String fx:value="paneltext" />
+                     </styleClass>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab text="Delete Employee">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="159.0" layoutY="74.0" prefHeight="200.0" prefWidth="382.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" text="Enter Employee Id to Delete his/her Record" textAlignment="CENTER" textFill="#2107ed">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <Label text="*" textAlignment="CENTER" textFill="#f20202" />
+                              <Label text="Employee Id : " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="did" prefWidth="200.0" promptText="Enter Employee Id" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="10.0" styleClass="paneltext" stylesheets="@../css/dashboard.css">
+                           <children>
+                              <Label layoutX="201.0" layoutY="23.0" text="*" textAlignment="CENTER" textFill="#f20202" />
+                              <Label text="Employee Name " textAlignment="CENTER" underline="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="dname" prefWidth="200.0" promptText="Enter Employee Name">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#Delete_Employee" prefHeight="32.0" prefWidth="200.0" text="Delete Employee" />
+                           </children>
+                        </HBox>
+                        <Label text="* fields are compulsory" textAlignment="CENTER" textFill="#f80606" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="panel" />
+                        <String fx:value="paneltext" />
+                     </styleClass>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab text="User Settings">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="382.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="280.0" layoutY="131.0" text="Change User Settings" textFill="#f80505">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="281.0" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <PasswordField fx:id="newpass" layoutX="221.0" layoutY="20.0" promptText="Set New Password" />
+                              <PasswordField fx:id="confirmpass" promptText="Confirm Password" />
+                              <Button mnemonicParsing="false" onAction="#NewPassword" text="Change Password" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="313.0" prefHeight="45.0" prefWidth="600.0" spacing="20.0">
+                           <children>
+                              <TextField fx:id="newuser" prefWidth="200.0" promptText="Set new Username" />
+                              <TextField fx:id="confirmuser" layoutX="325.0" layoutY="20.0" prefWidth="200.0" promptText="Confirm Username" />
+                              <Button mnemonicParsing="false" onAction="#NewUsername" text="Change Username" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="panel" />
+                        <String fx:value="paneltext" />
+                     </styleClass>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Employee Leave Manager.jnlp">
+  <information>
+    <title>Employee Leave Manager</title>
+    <vendor>Unknown</vendor>
+    <description>Employee Leave Manager</description>
+    <offline-allowed/>
+  <shortcut><desktop/></shortcut>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="el.jar" size="126794" download="eager" />
+    <jar href="lib\jbcrypt-0.3m.jar" size="17750" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.11.jar" size="2036609" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="el.El"  name="Employee Leave Manager" />
+  <update check="background"/>
+</jnlp>
