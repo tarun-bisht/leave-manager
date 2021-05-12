@@ -1,5 +1,6 @@
-# leave_manager_KU
-A demo software for employee leave manager for Kumaun University Nainital
+# Leave Manager Software
 
-It uses my custom date module which is in github already.
-Custom date Module: https://github.com/tarun-bisht/custom_date-java-module
+- A gui based demo software for employee leave manager created for Kumaun University Nainital.
+- Created with JAVA FXML
+
+- It uses my [custom date module](https://github.com/tarun-bisht/custom_date-java-module).
